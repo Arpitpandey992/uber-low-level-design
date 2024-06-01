@@ -1,4 +1,4 @@
-package com.uber.lld;
+package com.uber.lld.Observer;
 
 public interface Observer {
     void notifyChange();
