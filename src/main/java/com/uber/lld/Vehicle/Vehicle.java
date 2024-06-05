@@ -2,14 +2,10 @@ package com.uber.lld.Vehicle;
 
 import com.uber.lld.Driver;
 
-import lombok.AllArgsConstructor;
-import lombok.Data;
+public interface Vehicle {
+    Driver getDriver();
 
-@AllArgsConstructor
-@Data
-public abstract class Vehicle {
-    private Driver driver;
-    private String licenceNumber;
+    String getLicenceNumber();
 
-    public abstract VehicleType getType();
+    VehicleType getType();
 }
