@@ -10,16 +10,10 @@ public interface DriveService {
      * passenger. When assignDriver is called, ensure that all drivers are available
      * and not currently in a ride. We can optimize by allowing conflicts but when
      * assigning driver, check for lock
+     * Returns null if no driver could be assigned
      * 
      * @param passenger
      * @return Driver
-     * @throws NoDriverAvailableException
      */
-    Driver assignDriver(Passenger passenger) throws NoDriverAvailableException;
-
-    public class NoDriverAvailableException extends Exception {
-        public NoDriverAvailableException(String message) {
-            super(message);
-        }
-    }
+    Driver assignDriver(Passenger passenger);
 }
